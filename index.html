@@ -1,0 +1,1590 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELEVATE | Acelerador de Negócios de Estética - Angola</title>
+    <meta name="description" content="Transformamos Técnicos em propagadores da marca. Especializados no mercado angolano de estética. Consultoria gratuita.">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="ELEVATE - Acelerador de Negócios de Estética">
+    <meta property="og:description" content="Transforme seu negócio de estética em Angola com nossa metodologia comprovada.">
+    <meta property="og:image" content="https://elevate.ao/og-image.jpg">
+    <meta property="og:url" content="https://elevate.ao">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <!-- Custom Styles & Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#faf5ff',
+                            100: '#f3e8ff',
+                            200: '#e9d5ff',
+                            300: '#d8b4fe',
+                            400: '#c084fc',
+                            500: '#a855f7',
+                            600: '#9333ea',
+                            700: '#7e22ce',
+                            800: '#6b21a8',
+                            900: '#581c87',
+                        },
+                        dark: {
+                            50: '#f9fafb',
+                            100: '#f3f4f6',
+                            200: '#e5e7eb',
+                            300: '#d1d5db',
+                            400: '#9ca3af',
+                            500: '#6b7280',
+                            600: '#4b5563',
+                            700: '#374151',
+                            800: '#1f2937',
+                            900: '#111827',
+                            950: '#030712',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+                        'gradient': 'gradient 8s ease infinite',
+                        'shimmer': 'shimmer 2s infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        'pulse-glow': {
+                            '0%, 100%': { opacity: 1 },
+                            '50%': { opacity: 0.7 },
+                        },
+                        gradient: {
+                            '0%, 100%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' },
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-500px 0' },
+                            '100%': { backgroundPosition: '500px 0' },
+                        }
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                        'grid-pattern': "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        :root {
+            --color-primary: #a855f7;
+            --color-primary-dark: #7e22ce;
+            --color-secondary: #ec4899;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #030712;
+            color: #f9fafb;
+            overflow-x: hidden;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #111827;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(45deg, #a855f7, #ec4899);
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(45deg, #9333ea, #db2777);
+        }
+        
+        /* Glass Effect */
+        .glass {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .glass-light {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        /* Gradient Text */
+        .gradient-text {
+            background: linear-gradient(90deg, #a855f7, #ec4899, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Gradient Border */
+        .gradient-border {
+            position: relative;
+            background: linear-gradient(45deg, #a855f7, #ec4899);
+            padding: 3px;
+            border-radius: 1rem;
+        }
+        
+        .gradient-border > div {
+            background: #111827;
+            border-radius: 0.9rem;
+            padding: 1.5rem;
+        }
+        
+        /* Particle Background */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -10;
+            overflow: hidden;
+        }
+        
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(168, 85, 247, 0.2) 0%, transparent 70%);
+        }
+        
+        /* Shimmer Effect */
+        .shimmer {
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            background-size: 1000px 100%;
+            animation: shimmer 2s infinite;
+        }
+        
+        /* Custom Animations */
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes pulse-ring {
+            0% { transform: scale(0.8); opacity: 0.8; }
+            80%, 100% { transform: scale(1.2); opacity: 0; }
+        }
+        
+        /* 3D Card Effect */
+        .card-3d {
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        
+        .card-3d:hover {
+            transform: rotateY(5deg) rotateX(5deg) translateY(-10px);
+            transition: transform 0.5s ease;
+        }
+        
+        /* Glowing Button */
+        .btn-glow {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-glow::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.7s;
+        }
+        
+        .btn-glow:hover::before {
+            left: 100%;
+        }
+        
+        /* Stats Counter */
+        .counter {
+            font-variant-numeric: tabular-nums;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Particle Background -->
+    <div class="particles" id="particles-js"></div>
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center animate-pulse-glow">
+                        <i class="fas fa-bolt text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold gradient-text">ELEVATE</h1>
+                        <p class="text-xs text-gray-400">Acelerador de Negócios</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-300 hover:text-white transition-colors font-medium">Início</a>
+                    <a href="#services" class="text-gray-300 hover:text-white transition-colors font-medium">Serviços</a>
+                    <a href="#results" class="text-gray-300 hover:text-white transition-colors font-medium">Resultados</a>
+                    <a href="#cases" class="text-gray-300 hover:text-white transition-colors font-medium">Cases</a>
+                    <a href="#about" class="text-gray-300 hover:text-white transition-colors font-medium">Quem Somos</a>
+                    <button onclick="openConsultationModal()" class="btn-glow bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold px-6 py-3 rounded-xl hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300">
+                        <i class="fas fa-calendar-alt mr-2"></i>Consultoria Gratuita
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-white">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-gray-800">
+                <div class="flex flex-col space-y-4">
+                    <a href="#home" class="text-gray-300 hover:text-white transition-colors font-medium py-2">Início</a>
+                    <a href="#services" class="text-gray-300 hover:text-white transition-colors font-medium py-2">Serviços</a>
+                    <a href="#results" class="text-gray-300 hover:text-white transition-colors font-medium py-2">Resultados</a>
+                    <a href="#cases" class="text-gray-300 hover:text-white transition-colors font-medium py-2">Cases</a>
+                    <a href="#about" class="text-gray-300 hover:text-white transition-colors font-medium py-2">Quem Somos</a>
+                    <button onclick="openConsultationModal()" class="btn-glow bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold px-6 py-3 rounded-xl hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300">
+                        <i class="fas fa-calendar-alt mr-2"></i>Consultoria Gratuita
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 md:pt-40 md:pb-32 relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-6xl mx-auto">
+                <!-- Badge -->
+                <div data-aos="fade-up" class="inline-flex items-center space-x-2 glass-light px-4 py-2 rounded-full mb-8">
+                    <i class="fas fa-sparkles text-purple-400"></i>
+                    <span class="text-sm text-purple-300">Nova Geração da Gestão em Estética</span>
+                </div>
+                
+                <!-- Main Headline -->
+                <h1 data-aos="fade-up" data-aos-delay="100" class="text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight">
+                    <span class="block gradient-text">TRANSFORME</span>
+                    <span class="block text-white">TÉCNICOS EM</span>
+                    <span class="block gradient-text">PROPAGADORES</span>
+                    <span class="block text-white">DA MARCA</span>
+                </h1>
+                
+                <!-- Subtitle -->
+                <p data-aos="fade-up" data-aos-delay="200" class="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl">
+                    Somos o braço estratégico que empreendedores da estética precisam para escalar seus negócios com um sistema de gestão robusto no mercado angolano.
+                </p>
+                
+                <!-- CTA Buttons -->
+                <div data-aos="fade-up" data-aos-delay="300" class="flex flex-col sm:flex-row gap-4 mb-16">
+                    <button onclick="openConsultationModal()" class="btn-glow bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold px-8 py-4 rounded-xl hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300 text-lg flex items-center justify-center">
+                        <i class="fas fa-calendar-check mr-3"></i>Agendar Consultoria Gratuita
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                    
+                    <a href="https://wa.me/244924000000?text=Olá! Gostaria de saber mais sobre a consultoria gratuita da ELEVATE" target="_blank" class="glass border border-gray-800 text-white font-bold px-8 py-4 rounded-xl hover:bg-gray-800/50 transition-all duration-300 text-lg flex items-center justify-center">
+                        <i class="fab fa-whatsapp mr-3 text-green-400"></i>Falar no WhatsApp
+                    </a>
+                </div>
+                
+                <!-- Stats -->
+                <div data-aos="fade-up" data-aos-delay="400" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="glass p-6 rounded-2xl">
+                        <div class="text-4xl font-bold text-white mb-2 counter" data-count="85">0%</div>
+                        <div class="text-gray-400">Aumento de Lucratividade</div>
+                    </div>
+                    <div class="glass p-6 rounded-2xl">
+                        <div class="text-4xl font-bold text-white mb-2 counter" data-count="100">0%</div>
+                        <div class="text-gray-400">Foco no Mercado Angolano</div>
+                    </div>
+                    <div class="glass p-6 rounded-2xl">
+                        <div class="text-4xl font-bold text-white mb-2">24/7</div>
+                        <div class="text-gray-400">Suporte Prático em Campo</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 md:py-32 relative">
+        <div class="container mx-auto px-4">
+            <!-- Section Header -->
+            <div data-aos="fade-up" class="text-center mb-16">
+                <div class="inline-flex items-center space-x-2 glass-light px-4 py-2 rounded-full mb-6">
+                    <i class="fas fa-star text-purple-400"></i>
+                    <span class="text-sm text-purple-300">Nossos Serviços</span>
+                </div>
+                <h2 class="text-4xl md:text-6xl font-bold mb-6">
+                    <span class="gradient-text">Transformação Completa</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Oferecemos três serviços principais que podem ser contratados separadamente ou como um caminho evolutivo.
+                </p>
+            </div>
+            
+            <!-- Services Cards -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
+                <!-- Service 1 -->
+                <div data-aos="fade-up" data-aos-delay="100" class="gradient-border card-3d">
+                    <div class="h-full">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
+                                <i class="fas fa-building text-white text-2xl"></i>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-2xl font-bold text-white">850.000 Kz</div>
+                                <div class="text-sm text-gray-400">Pacote Único</div>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-2xl font-bold text-white mb-3">Consultoria "Alicerce"</h3>
+                        <p class="text-sm text-purple-300 mb-4">Para quem vai ABRIR um negócio do zero</p>
+                        <p class="text-gray-300 mb-8">Projeto completo para tirar seu sonho do papel com segurança financeira e estratégica.</p>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-500 mt-1 mr-3"></i>
+                                <span class="text-gray-300">Modelo de negócio e posicionamento</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-500 mt-1 mr-3"></i>
+                                <span class="text-gray-300">Plano financeiro inicial</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-500 mt-1 mr-3"></i>
+                                <span class="text-gray-300">Estratégia de localização e layout</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-purple-500 mt-1 mr-3"></i>
+                                <span class="text-gray-300">Checklist de legalização</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-purptle-500 mt-1 mr-3"></i>
+                                <span class="text-gray-300">Portfólio inicial de serviços</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <div class="text-gray-400 text-sm mb-1">🎯 Resultado Final:</div>
+                            <div class="text-white font-medium">"Manual do Proprietário - Fase 1"</div>
+                        </div>
+                        
+                        <button onclick="openConsultationModal()" class="btn-glow w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold py-3 rounded-xl hover:shadow-xl transition-all duration-300">
+                            Quero este serviço
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Service 2 (Highlighted) -->
+                <div data-aos="fade-up" data-aos-delay="200" class="gradient-border card-3d relative scale-105">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <div class="bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-bold px-4 py-1 rounded-full">
+                            MAIS POPULAR
+                        </div>
+                    </div>
+                    <div class="h-full">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center">
+                                <i class="fas fa-rocket text-white text-2xl"></i>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-2xl font-bold text-white">Sob Avaliação</div>
+                                <div class="text-sm text-gray-400">Pacote 3-6 meses</div>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-2xl font-bold text-white mb-3">Mentoria "Acelera"</h3>
+                        <p class="text-sm text-purple-300 mb-4">Para negócios que querem CRESCER, ESCALAR e LUCAR</p>
+                        <p class="text-gray-300 mb-8">Imersão estratégica onde nos tornamos seus parceiros na implementação do Sistema Elevate.</p>
+                        
+                        <!-- Pillars -->
+                        <div class="mb-8 space-y-6">
+                            <div>
+                                <div class="text-white font-bold mb-2">🧠 PILAR PESSOAS</div>
+                                <p class="text-gray-400 text-sm">Engajamento, talentos, liderança e programas de incentivo</p>
+                            </div>
+                            <div>
+                                <div class="text-white font-bold mb-2">⚙️ PILAR PROCESSOS</div>
+                                <p class="text-gray-400 text-sm">Otimização de fluxos, manuais de procedimento, ferramentas de gestão</p>
+                            </div>
+                            <div>
+                                <div class="text-white font-bold mb-2">💰 PILAR RESULTADOS</div>
+                                <p class="text-gray-400 text-sm">KPIs, precificação, vendas, dashboard de indicadores</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <div class="text-gray-400 text-sm mb-1">🎯 Resultado Final:</div>
+                            <div class="text-white font-medium">Negócio transformado com lucratividade ascendente</div>
+                        </div>
+                        
+                        <button onclick="openConsultationModal()" class="btn-glow w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 rounded-xl hover:shadow-xl transition-all duration-300">
+                            Quero este serviço
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div data-aos="fade-up" data-aos-delay="300" class="gradient-border card-3d">
+                    <div class="h-full">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center">
+                                <i class="fas fa-users text-white text-2xl"></i>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-2xl font-bold text-white">Sob Orçamento</div>
+                                <div class="text-sm text-gray-400">Personalizado</div>
+                            </div>
+                        </div>
+                        
+                        <h3 class="text-2xl font-bold text-white mb-3">Formação "Equipe de Alto Impacto"</h3>
+                        <p class="text-sm text-purple-300 mb-4">Para treinar colaboradores de forma específica</p>
+                        <p class="text-gray-300 mb-8">Programas de formação para resolver problemas específicos da sua equipe.</p>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-300">Vendas & Atendimento ao Cliente</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-300">Cultura Organizacional</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-300">Trabalho em Equipe</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-300">Produtividade</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-300">Excelência Operacional</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <div class="text-gray-400 text-sm mb-1">🎯 Resultado Final:</div>
+                            <div class="text-white font-medium">Equipe qualificada, motivada e alinhada</div>
+                        </div>
+                        
+                        <button onclick="openConsultationModal()" class="btn-glow w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold py-3 rounded-xl hover:shadow-xl transition-all duration-300">
+                            Quero este serviço
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Differentiators -->
+            <div data-aos="fade-up" class="glass rounded-3xl p-8 md:p-12">
+                <h3 class="text-3xl font-bold text-center mb-12">
+                    <span class="gradient-text">Por que a Elevate é diferente?</span>
+                </h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-flag text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-3">Especialização Angola</h4>
+                        <p class="text-gray-400">Conhecemos o mercado, custo de vida, burocracia e comportamento do consumidor angolano.</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-users text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-3">Metodologia "Pessoas Primeiro"</h4>
+                        <p class="text-gray-400">Atacamos o núcleo: a gestão humana como motor real do crescimento sustentável.</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-chart-line text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-3">Foco em Resultados Financeiros</h4>
+                        <p class="text-gray-400">Não somos "coach". Somos parceiros medidos pelo aumento do seu lucro.</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-hands-helping text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-3">Abordagem Prática e de Campo</h4>
+                        <p class="text-gray-400">Estamos dentro do seu negócio, olhando planilhas, ajustando rotas em tempo real.</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-bolt text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-3">Jovem, porém Validado</h4>
+                        <p class="text-gray-400">Agilidade da nova geração com cases reais que comprovam nossa metodologia.</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-sync-alt text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-3">Sistema Completo</h4>
+                        <p class="text-gray-400">Do alicerce à excelência: estruturação, crescimento e formação de equipes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Dashboard -->
+    <section id="results" class="py-20 md:py-32 relative overflow-hidden">
+        <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <!-- Section Header -->
+            <div data-aos="fade-up" class="text-center mb-16">
+                <div class="inline-flex items-center space-x-2 glass-light px-4 py-2 rounded-full mb-6">
+                    <i class="fas fa-chart-bar text-purple-400"></i>
+                    <span class="text-sm text-purple-300">Resultados Comprovados</span>
+                </div>
+                <h2 class="text-4xl md:text-6xl font-bold mb-6">
+                    <span class="gradient-text">Dashboard de Resultados</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Indicadores reais que monitoramos para garantir o crescimento sustentável do seu negócio
+                </p>
+            </div>
+            
+            <!-- Charts Container -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                <!-- Growth Chart -->
+                <div data-aos="fade-right" class="glass rounded-3xl p-6">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-8">
+                        <h3 class="text-xl font-bold text-white mb-4 sm:mb-0">Crescimento Mensal</h3>
+                        <div class="flex space-x-2">
+                            <button id="btn-profit" class="px-4 py-2 bg-purple-600 text-white rounded-lg text-sm font-medium">Lucratividade</button>
+                            <button id="btn-clients" class="px-4 py-2 bg-gray-800 text-gray-400 rounded-lg text-sm font-medium hover:text-white">Base de Clientes</button>
+                        </div>
+                    </div>
+                    <div class="h-80">
+                        <canvas id="growthChart"></canvas>
+                    </div>
+                </div>
+                
+                <!-- KPI Chart -->
+                <div data-aos="fade-left" class="glass rounded-3xl p-6">
+                    <h3 class="text-xl font-bold text-white mb-8">KPIs do Negócio</h3>
+                    <div class="h-80">
+                        <canvas id="kpiChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Metrics -->
+            <div data-aos="fade-up" class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass p-6 rounded-2xl text-center">
+                    <div class="text-4xl font-bold text-white mb-2 counter" data-count="85">0%</div>
+                    <div class="text-gray-400">Aumento de Lucro</div>
+                </div>
+                <div class="glass p-6 rounded-2xl text-center">
+                    <div class="text-4xl font-bold text-white mb-2 counter" data-count="65">0%</div>
+                    <div class="text-gray-400">Engajamento da Equipe</div>
+                </div>
+                <div class="glass p-6 rounded-2xl text-center">
+                    <div class="text-4xl font-bold text-white mb-2 counter" data-count="40">0%</div>
+                    <div class="text-gray-400">Redução de Custos</div>
+                </div>
+                <div class="glass p-6 rounded-2xl text-center">
+                    <div class="text-4xl font-bold text-white mb-2">100%</div>
+                    <div class="text-gray-400">Satisfação do Cliente</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Audience -->
+    <section id="about" class="py-20 md:py-32 relative">
+        <div class="container mx-auto px-4">
+            <!-- Section Header -->
+            <div data-aos="fade-up" class="text-center mb-16">
+                <div class="inline-flex items-center space-x-2 glass-light px-4 py-2 rounded-full mb-6">
+                    <i class="fas fa-user-tie text-purple-400"></i>
+                    <span class="text-sm text-purple-300">Nosso Público</span>
+                </div>
+                <h2 class="text-4xl md:text-6xl font-bold mb-6">
+                    <span class="gradient-text">Quem Atendemos</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Identificamos 3 perfis de empreendedores da estética que mais se beneficiam da nossa metodologia
+                </p>
+            </div>
+            
+            <!-- Profiles -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
+                <!-- Profile A -->
+                <div data-aos="fade-up" data-aos-delay="100" class="glass rounded-3xl p-8 hover:border-purple-500/30 border border-gray-800/50 transition-all duration-300">
+                    <div class="text-4xl mb-6">🚀</div>
+                    <div class="inline-block px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 mb-4">
+                        <span class="text-sm text-purple-300 font-medium">Perfil A</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Profissional que já tem clientela e quer abrir seu primeiro espaço físico</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="text-sm text-gray-400 mb-1">💡 Serviço Ideal</div>
+                            <div class="text-white font-medium">Consultoria "Alicerce"</div>
+                        </div>
+                        <div>
+                            <div class="text-sm text-gray-400 mb-1">🎯 Principal Dor</div>
+                            <div class="text-gray-300">Tem o sonho, mas teme os números e a burocracia</div>
+                        </div>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-gray-800/50">
+                        <button onclick="openConsultationModal()" class="btn-glow w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 rounded-xl hover:shadow-xl transition-all duration-300">
+                            Me identifico com este perfil
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Profile B -->
+                <div data-aos="fade-up" data-aos-delay="200" class="glass rounded-3xl p-8 hover:border-purple-500/30 border border-gray-800/50 transition-all duration-300">
+                    <div class="text-4xl mb-6">📈</div>
+                    <div class="inline-block px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 mb-4">
+                        <span class="text-sm text-purple-300 font-medium">Perfil B</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Dono(a) de clínica ou salão com 1 a 5 anos de existência</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="text-sm text-gray-400 mb-1">💡 Serviço Ideal</div>
+                            <div class="text-white font-medium">Mentoria "Acelera"</div>
+                        </div>
+                        <div>
+                            <div class="text-sm text-gray-400 mb-1">🎯 Principal Dor</div>
+                            <div class="text-gray-300">Atingiu um "teto", equipe não rende, problemas de caixa</div>
+                        </div>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-gray-800/50">
+                        <button onclick="openConsultationModal()" class="btn-glow w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 rounded-xl hover:shadow-xl transition-all duration-300">
+                            Me identifico com este perfil
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Profile C -->
+                <div data-aos="fade-up" data-aos-delay="300" class="glass rounded-3xl p-8 hover:border-purple-500/30 border border-gray-800/50 transition-all duration-300">
+                    <div class="text-4xl mb-6">👥</div>
+                    <div class="inline-block px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 mb-4">
+                        <span class="text-sm text-purple-300 font-medium">Perfil C</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Dono de negócio com equipe técnica boa mas falta habilidades</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="text-sm text-gray-400 mb-1">💡 Serviço Ideal</div>
+                            <div class="text-white font-medium">Formação "Equipe de Alto Impacto"</div>
+                        </div>
+                        <div>
+                            <div class="text-sm text-gray-400 mb-1">🎯 Principal Dor</div>
+                            <div class="text-gray-300">Faltam habilidades em vendas, atendimento ou trabalho em equipe</div>
+                        </div>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-gray-800/50">
+                        <button onclick="openConsultationModal()" class="btn-glow w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 rounded-xl hover:shadow-xl transition-all duration-300">
+                            Me identifico com este perfil
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Manifesto -->
+            <div data-aos="fade-up" class="glass rounded-3xl p-8 md:p-12">
+                <div class="max-w-4xl mx-auto">
+                    <h3 class="text-3xl md:text-4xl font-bold text-center mb-8">
+                        <span class="gradient-text">Nosso Manifesto</span>
+                    </h3>
+                    <div class="space-y-6 text-lg text-gray-300">
+                        <p>
+                            <strong class="text-white">Somos a nova geração da gestão no mercado de estética angolano.</strong> Acreditamos que um negócio de sucesso não nasce apenas de uma técnica impecável, mas de um sistema de gestão robusto.
+                        </p>
+                        <p>
+                            Identificamos que a maior dor dos empreendedores do setor é justamente esta: são excelentes profissionais, mas gestores iniciantes.
+                        </p>
+                        <p>
+                            A Elevate nasceu para ser o braço estratégico e o mentor que esses empreendedores precisam. Atuamos desde a concepção do negócio até a excelência operacional, com foco em <strong class="text-purple-300">Pessoas, Processos e Resultados Financeiros</strong>.
+                        </p>
+                    </div>
+                    <div class="mt-12 flex justify-center">
+                        <button onclick="openConsultationModal()" class="btn-glow bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold px-8 py-4 rounded-xl hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300 text-lg flex items-center">
+                            <i class="fas fa-heart mr-3"></i>Quero fazer parte desta transformação
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Cases -->
+    <section id="cases" class="py-20 md:py-32 relative overflow-hidden">
+        <div class="container mx-auto px-4">
+            <!-- Section Header -->
+            <div data-aos="fade-up" class="text-center mb-16">
+                <div class="inline-flex items-center space-x-2 glass-light px-4 py-2 rounded-full mb-6">
+                    <i class="fas fa-trophy text-purple-400"></i>
+                    <span class="text-sm text-purple-300">Resultados Reais</span>
+                </div>
+                <h2 class="text-4xl md:text-6xl font-bold mb-6">
+                    <span class="gradient-text">Cases de Sucesso</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Histórias reais de empreendedores que transformaram seus negócios com a Elevate
+                </p>
+            </div>
+            
+            <!-- Cases Slider -->
+            <div class="swiper cases-swiper mb-20">
+                <div class="swiper-wrapper">
+                    <!-- Case 1 -->
+                    <div class="swiper-slide">
+                        <div class="glass rounded-3xl p-8 h-full">
+                            <div class="flex justify-between items-start mb-8">
+                                <div>
+                                    <div class="text-2xl font-bold text-white">Mell Beauty</div>
+                                    <div class="text-purple-300">+150% faturamento em 6 meses</div>
+                                </div>
+                                <div class="text-3xl">⭐</div>
+                            </div>
+                            
+                            <div class="mb-8">
+                                <div class="text-gray-400 text-sm mb-2">🎯 Destaque:</div>
+                                <div class="text-white font-medium">Como abrir com segurança e evitar dívidas iniciais</div>
+                            </div>
+                            
+                            <div class="bg-gray-800/30 rounded-2xl p-6 mb-8">
+                                <div class="text-gray-300 italic">"Com a Elevate abri meu espaço sem dívidas e com processos claros desde o primeiro dia. O 'Manual do Proprietário' foi fundamental para não cometer erros custosos."</div>
+                            </div>
+                            
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 flex items-center justify-center mr-4">
+                                    <i class="fas fa-user text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="text-white font-medium">Empreendedora Mell Beauty</div>
+                                    <div class="text-gray-400 text-sm">Esteticista há 8 anos</div>
+                                </div>
+                            </div>
+                            
+                            <button onclick="openConsultationModal()" class="btn-glow w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 rounded-xl hover:shadow-xl transition-all duration-300">
+                                Quero resultados como estes
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Case 2 -->
+                    <div class="swiper-slide">
+                        <div class="glass rounded-3xl p-8 h-full">
+                            <div class="flex justify-between items-start mb-8">
+                                <div>
+                                    <div class="text-2xl font-bold text-white">Revigorada</div>
+                                    <div class="text-purple-300">+85% engajamento da equipe</div>
+                                </div>
+                                <div class="text-3xl">⭐</div>
+                            </div>
+                            
+                            <div class="mb-8">
+                                <div class="text-gray-400 text-sm mb-2">🎯 Destaque:</div>
+                                <div class="text-white font-medium">Como transformar a dinâmica de uma equipe</div>
+                            </div>
+                            
+                            <div class="bg-gray-800/30 rounded-2xl p-6 mb-8">
+                                <div class="text-gray-300 italic">"A Elevate transformou completamente a dinâmica da nossa equipe. Identificamos líderes naturais, criamos programas de incentivo e hoje temos uma equipe alinhada com o crescimento do negócio."</div>
+                            </div>
+                            
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 flex items-center justify-center mr-4">
+                                    <i class="fas fa-user text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="text-white font-medium">Dona da Revigorada</div>
+                                    <div class="text-gray-400 text-sm">Clínica de estética há 3 anos</div>
+                                </div>
+                            </div>
+                            
+                            <button onclick="openConsultationModal()" class="btn-glow w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 rounded-xl hover:shadow-xl transition-all duration-300">
+                                Quero resultados como estes
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Case 3 (Placeholder for future) -->
+                    <div class="swiper-slide">
+                        <div class="glass rounded-3xl p-8 h-full">
+                            <div class="flex justify-between items-start mb-8">
+                                <div>
+                                    <div class="text-2xl font-bold text-white">Seu Negócio Aqui</div>
+                                    <div class="text-purple-300">Próximo case de sucesso</div>
+                                </div>
+                                <div class="text-3xl">🚀</div>
+                            </div>
+                            
+                            <div class="mb-8">
+                                <div class="text-gray-400 text-sm mb-2">🎯 Destaque:</div>
+                                <div class="text-white font-medium">Sua história de transformação</div>
+                            </div>
+                            
+                            <div class="bg-gray-800/30 rounded-2xl p-6 mb-8">
+                                <div class="text-gray-300 italic">"Esta poderia ser a sua história de sucesso. Com a metodologia Elevate, você pode transformar seu negócio de estética e alcançar resultados extraordinários."</div>
+                            </div>
+                            
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 flex items-center justify-center mr-4">
+                                    <i class="fas fa-user-plus text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="text-white font-medium">Próximo empreendedor</div>
+                                    <div class="text-gray-400 text-sm">Você pode ser o próximo</div>
+                                </div>
+                            </div>
+                            
+                            <button onclick="openConsultationModal()" class="btn-glow w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 rounded-xl hover:shadow-xl transition-all duration-300">
+                                Quero ser o próximo case
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation -->
+                <div class="swiper-button-next !text-purple-500"></div>
+                <div class="swiper-button-prev !text-purple-500"></div>
+                
+                <!-- Pagination -->
+                <div class="swiper-pagination !relative !mt-8"></div>
+            </div>
+            
+            <!-- Final CTA -->
+            <div data-aos="fade-up" class="relative overflow-hidden rounded-3xl">
+                <div class="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-purple-600/20"></div>
+                <div class="relative glass p-8 md:p-12 rounded-3xl">
+                    <div class="max-w-4xl mx-auto text-center">
+                        <h3 class="text-4xl md:text-5xl font-bold mb-6">
+                            <span class="gradient-text">Pronto para Transformar Seu Negócio?</span>
+                        </h3>
+                        <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                            Agende sua consultoria gratuita de 30 minutos e descubra como podemos aumentar sua lucratividade em até 85% no próximo ano.
+                        </p>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                            <button onclick="openConsultationModal()" class="btn-glow bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold px-8 py-4 rounded-xl hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300 text-lg flex items-center justify-center">
+                                <i class="fas fa-calendar-check mr-3"></i>Agendar Consultoria Gratuita
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                            
+                            <a href="https://wa.me/244924000000?text=Olá! Gostaria de agendar uma consultoria gratuita com a ELEVATE" target="_blank" class="glass border border-gray-800 text-white font-bold px-8 py-4 rounded-xl hover:bg-gray-800/50 transition-all duration-300 text-lg flex items-center justify-center">
+                                <i class="fab fa-whatsapp mr-3 text-green-400"></i>Falar no WhatsApp
+                            </a>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="text-center p-4">
+                                <div class="text-2xl font-bold text-white mb-2">30min</div>
+                                <div class="text-gray-400">Duração da Consultoria</div>
+                            </div>
+                            <div class="text-center p-4">
+                                <div class="text-2xl font-bold text-white mb-2">100%</div>
+                                <div class="text-gray-400">Gratuita & Sem Compromisso</div>
+                            </div>
+                            <div class="text-center p-4">
+                                <div class="text-2xl font-bold text-white mb-2">24h</div>
+                                <div class="text-gray-400">Resposta Garantida</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative border-t border-gray-800/50">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center">
+                            <i class="fas fa-bolt text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-2xl gradient-text">ELEVATE</div>
+                            <div class="text-sm text-gray-400">Acelerador de Negócios de Estética</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        Transformamos Técnicos em propagadores da marca. Especializados no mercado angolano de estética.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Serviços</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Consultoria "Alicerce"</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Mentoria "Acelera"</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Formação de Equipe</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Links -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Links Rápidos</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Início</a></li>
+                        <li><a href="#results" class="text-gray-400 hover:text-white transition-colors">Resultados</a></li>
+                        <li><a href="#cases" class="text-gray-400 hover:text-white transition-colors">Cases</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">Quem Somos</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Contato</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3 text-purple-400"></i>
+                            <span>Luanda, Angola</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-purple-400"></i>
+                            <span>contacto@elevate.ao</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-purple-400"></i>
+                            <span>+244 924 000 000</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6">
+                        <button onclick="openConsultationModal()" class="btn-glow w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 rounded-xl hover:shadow-xl transition-all duration-300">
+                            <i class="fas fa-calendar-alt mr-2"></i>Consultoria Gratuita
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="mt-12 pt-8 border-t border-gray-800/50 text-center text-gray-400 text-sm">
+                <p>© <span id="current-year"></span> ELEVATE - Acelerador de Negócios de Estética. Todos os direitos reservados.</p>
+                <p class="mt-2">Transformamos Técnicos em propagadores da marca.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Consultation Modal -->
+    <div id="consultation-modal" class="fixed inset-0 z-50 hidden">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="relative w-full max-w-2xl">
+                <!-- Close Button -->
+                <button onclick="closeConsultationModal()" class="absolute -top-3 -right-3 z-10 w-10 h-10 rounded-full bg-gray-900 border border-gray-800 flex items-center justify-center text-white hover:bg-gray-800 transition-colors">
+                    <i class="fas fa-times"></i>
+                </button>
+                
+                <!-- Modal Content -->
+                <div class="glass rounded-3xl overflow-hidden">
+                    <!-- Header -->
+                    <div class="bg-gradient-to-r from-purple-600 to-pink-600 p-6">
+                        <h3 class="text-2xl font-bold text-white text-center">
+                            <i class="fas fa-calendar-star mr-2"></i>Agendar Consultoria Gratuita
+                        </h3>
+                        <p class="text-purple-100 text-center mt-2">
+                            Preencha o formulário e agende sua consultoria de 30 minutos sem compromisso
+                        </p>
+                    </div>
+                    
+                    <!-- Form -->
+                    <div class="p-6 md:p-8">
+                        <form id="consultation-form" class="space-y-6">
+                            <!-- Step 1 -->
+                            <div id="step-1" class="space-y-6">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="block text-gray-300 mb-2">Nome Completo *</label>
+                                        <input type="text" required class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl focus:outline-none focus:border-purple-500 text-white placeholder-gray-500" placeholder="Seu nome completo">
+                                    </div>
+                                    <div>
+                                        <label class="block text-gray-300 mb-2">WhatsApp *</label>
+                                        <input type="tel" required class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl focus:outline-none focus:border-purple-500 text-white placeholder-gray-500" placeholder="+244 900 000 000">
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <label class="block text-gray-300 mb-2">E-mail *</label>
+                                    <input type="email" required class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl focus:outline-none focus:border-purple-500 text-white placeholder-gray-500" placeholder="seu@email.com">
+                                </div>
+                                
+                                <div>
+                                    <label class="block text-gray-300 mb-2">Situação do seu negócio *</label>
+                                    <select required class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl focus:outline-none focus:border-purple-500 text-white">
+                                        <option value="" class="bg-gray-900">Selecione seu perfil</option>
+                                        <option value="abrir" class="bg-gray-900">Vou abrir meu primeiro espaço</option>
+                                        <option value="crescer" class="bg-gray-900">Tenho negócio e quero crescer</option>
+                                        <option value="treinar" class="bg-gray-900">Preciso treinar minha equipe</option>
+                                    </select>
+                                </div>
+                                
+                                <button type="button" onclick="nextStep()" class="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 rounded-xl hover:opacity-90 transition-opacity">
+                                    Próximo <i class="fas fa-arrow-right ml-2"></i>
+                                </button>
+                            </div>
+                            
+                            <!-- Step 2 -->
+                            <div id="step-2" class="space-y-6 hidden">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="block text-gray-300 mb-2">Data Preferencial *</label>
+                                        <input type="date" required class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl focus:outline-none focus:border-purple-500 text-white">
+                                    </div>
+                                    <div>
+                                        <label class="block text-gray-300 mb-2">Horário Preferencial *</label>
+                                        <select required class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl focus:outline-none focus:border-purple-500 text-white">
+                                            <option value="" class="bg-gray-900">Selecione um horário</option>
+                                            <option value="09:00" class="bg-gray-900">09:00 - 10:00</option>
+                                            <option value="10:00" class="bg-gray-900">10:00 - 11:00</option>
+                                            <option value="11:00" class="bg-gray-900">11:00 - 12:00</option>
+                                            <option value="14:00" class="bg-gray-900">14:00 - 15:00</option>
+                                            <option value="15:00" class="bg-gray-900">15:00 - 16:00</option>
+                                            <option value="16:00" class="bg-gray-900">16:00 - 17:00</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <label class="block text-gray-300 mb-2">Serviço de maior interesse</label>
+                                    <select class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl focus:outline-none focus:border-purple-500 text-white">
+                                        <option value="" class="bg-gray-900">Selecione um serviço</option>
+                                        <option value="alicerce" class="bg-gray-900">Consultoria "Alicerce"</option>
+                                        <option value="acelera" class="bg-gray-900">Mentoria "Acelera"</option>
+                                        <option value="formacao" class="bg-gray-900">Formação de Equipe</option>
+                                        <option value="indeciso" class="bg-gray-900">Ainda não sei - Preciso de ajuda</option>
+                                    </select>
+                                </div>
+                                
+                                <div>
+                                    <label class="block text-gray-300 mb-2">Alguma dúvida específica?</label>
+                                    <textarea class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl focus:outline-none focus:border-purple-500 text-white placeholder-gray-500" rows="3" placeholder="Conte-nos sobre suas maiores dificuldades..."></textarea>
+                                </div>
+                                
+                                <div class="flex gap-4">
+                                    <button type="button" onclick="prevStep()" class="flex-1 border border-gray-700 text-gray-300 font-semibold py-3 rounded-xl hover:bg-gray-800 transition-colors">
+                                        <i class="fas fa-arrow-left mr-2"></i>Voltar
+                                    </button>
+                                    <button type="submit" class="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 rounded-xl hover:opacity-90 transition-opacity">
+                                        <i class="fas fa-calendar-check mr-2"></i>Agendar Consultoria
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        
+                        <div class="mt-6 pt-6 border-t border-gray-800 text-center">
+                            <p class="text-sm text-gray-400">
+                                <i class="fas fa-shield-alt mr-2"></i>Seus dados estão seguros. Não enviamos spam.
+                            </p>
+                            <p class="text-xs text-gray-500 mt-2">
+                                ⚡ Consultoria 100% gratuita • ⏱️ 30 minutos • 💻 Via Google Meet
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-2xl shadow-purple-500/30 z-40 hidden hover:scale-110 transition-transform">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Main JavaScript -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+        
+        // Initialize Swiper
+        const swiper = new Swiper('.cases-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                }
+            }
+        });
+        
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+        
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Consultation Modal Functions
+        let currentStep = 1;
+        
+        function openConsultationModal() {
+            document.getElementById('consultation-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeConsultationModal() {
+            document.getElementById('consultation-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+            resetForm();
+        }
+        
+        function nextStep() {
+            document.getElementById('step-1').classList.add('hidden');
+            document.getElementById('step-2').classList.remove('hidden');
+            currentStep = 2;
+        }
+        
+        function prevStep() {
+            document.getElementById('step-2').classList.add('hidden');
+            document.getElementById('step-1').classList.remove('hidden');
+            currentStep = 1;
+        }
+        
+        function resetForm() {
+            document.getElementById('consultation-form').reset();
+            document.getElementById('step-2').classList.add('hidden');
+            document.getElementById('step-1').classList.remove('hidden');
+            currentStep = 1;
+        }
+        
+        // Close modal when clicking outside
+        document.getElementById('consultation-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeConsultationModal();
+            }
+        });
+        
+        // Form Submission
+        document.getElementById('consultation-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulate form submission
+            Swal.fire({
+                icon: 'success',
+                title: 'Consulta Agendada!',
+                html: `
+                    <div class="text-left">
+                        <p class="mb-2">✅ Sua consultoria gratuita foi agendada com sucesso!</p>
+                        <p class="mb-4">Entraremos em contato em até 24 horas para confirmação.</p>
+                        <div class="bg-gray-800/50 rounded-lg p-4">
+                            <p class="text-sm"><strong>Próximos passos:</strong></p>
+                            <p class="text-sm mt-1">1. Confirmaremos via WhatsApp</p>
+                            <p class="text-sm">2. Enviaremos o link do Google Meet</p>
+                            <p class="text-sm">3. Prepare suas principais dúvidas</p>
+                        </div>
+                    </div>
+                `,
+                confirmButtonText: 'Entendido',
+                confirmButtonColor: '#a855f7',
+                background: '#111827',
+                color: '#fff',
+                iconColor: '#10b981'
+            });
+            
+            closeConsultationModal();
+        });
+        
+        // Chart.js Implementation
+        let growthChart, kpiChart;
+        let chartMode = 'profit';
+        
+        // Initialize charts when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Growth Chart
+            const growthCtx = document.getElementById('growthChart').getContext('2d');
+            growthChart = new Chart(growthCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+                    datasets: [{
+                        label: 'Lucratividade',
+                        data: [45, 52, 48, 60, 72, 85, 78, 92, 88, 95, 98, 100],
+                        borderColor: '#a855f7',
+                        backgroundColor: 'rgba(168, 85, 247, 0.1)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.4,
+                        pointBackgroundColor: '#a855f7',
+                        pointBorderColor: '#fff',
+                        pointBorderWidth: 2,
+                        pointRadius: 5,
+                        pointHoverRadius: 7
+                    }, {
+                        label: 'Base de Clientes',
+                        data: [65, 70, 68, 75, 82, 90, 88, 95, 93, 98, 100, 105],
+                        borderColor: '#ec4899',
+                        backgroundColor: 'rgba(236, 72, 153, 0.1)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.4,
+                        pointBackgroundColor: '#ec4899',
+                        pointBorderColor: '#fff',
+                        pointBorderWidth: 2,
+                        pointRadius: 5,
+                        pointHoverRadius: 7,
+                        hidden: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: '#9ca3af',
+                                font: {
+                                    size: 12
+                                }
+                            }
+                        },
+                        tooltip: {
+                            backgroundColor: '#1f2937',
+                            titleColor: '#fff',
+                            bodyColor: '#d1d5db',
+                            borderColor: '#4b5563',
+                            borderWidth: 1,
+                            padding: 12,
+                            cornerRadius: 8
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                color: 'rgba(75, 85, 99, 0.3)'
+                            },
+                            ticks: {
+                                color: '#9ca3af'
+                            }
+                        },
+                        y: {
+                            grid: {
+                                color: 'rgba(75, 85, 99, 0.3)'
+                            },
+                            ticks: {
+                                color: '#9ca3af',
+                                callback: function(value) {
+                                    return value + '%';
+                                }
+                            },
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+            
+            // KPI Chart
+            const kpiCtx = document.getElementById('kpiChart').getContext('2d');
+            kpiChart = new Chart(kpiCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Produtividade', 'Satisfação', 'Retenção', 'Crescimento'],
+                    datasets: [{
+                        label: 'KPIs (%)',
+                        data: [85, 92, 78, 95],
+                        backgroundColor: [
+                            'rgba(168, 85, 247, 0.8)',
+                            'rgba(236, 72, 153, 0.8)',
+                            'rgba(16, 185, 129, 0.8)',
+                            'rgba(59, 130, 246, 0.8)'
+                        ],
+                        borderColor: [
+                            'rgb(168, 85, 247)',
+                            'rgb(236, 72, 153)',
+                            'rgb(16, 185, 129)',
+                            'rgb(59, 130, 246)'
+                        ],
+                        borderWidth: 2,
+                        borderRadius: 8,
+                        borderSkipped: false,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            backgroundColor: '#1f2937',
+                            titleColor: '#fff',
+                            bodyColor: '#d1d5db',
+                            borderColor: '#4b5563',
+                            borderWidth: 1,
+                            padding: 12,
+                            cornerRadius: 8,
+                            callbacks: {
+                                label: function(context) {
+                                    return context.dataset.label + ': ' + context.parsed.y + '%';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: {
+                                color: 'rgba(75, 85, 99, 0.3)'
+                            },
+                            ticks: {
+                                color: '#9ca3af'
+                            }
+                        },
+                        y: {
+                            grid: {
+                                color: 'rgba(75, 85, 99, 0.3)'
+                            },
+                            ticks: {
+                                color: '#9ca3af',
+                                callback: function(value) {
+                                    return value + '%';
+                                }
+                            },
+                            beginAtZero: true,
+                            max: 100
+                        }
+                    }
+                }
+            });
+            
+            // Chart toggle buttons
+            document.getElementById('btn-profit').addEventListener('click', function() {
+                this.classList.add('bg-purple-600', 'text-white');
+                this.classList.remove('bg-gray-800', 'text-gray-400');
+                document.getElementById('btn-clients').classList.remove('bg-purple-600', 'text-white');
+                document.getElementById('btn-clients').classList.add('bg-gray-800', 'text-gray-400');
+                
+                growthChart.data.datasets[0].hidden = false;
+                growthChart.data.datasets[1].hidden = true;
+                growthChart.update();
+            });
+            
+            document.getElementById('btn-clients').addEventListener('click', function() {
+                this.classList.add('bg-purple-600', 'text-white');
+                this.classList.remove('bg-gray-800', 'text-gray-400');
+                document.getElementById('btn-profit').classList.remove('bg-purple-600', 'text-white');
+                document.getElementById('btn-profit').classList.add('bg-gray-800', 'text-gray-400');
+                
+                growthChart.data.datasets[0].hidden = true;
+                growthChart.data.datasets[1].hidden = false;
+                growthChart.update();
+            });
+            
+            // Animated counters
+            const counters = document.querySelectorAll('.counter');
+            const speed = 200;
+            
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = parseInt(counter.getAttribute('data-count'));
+                    const count = parseInt(counter.innerText);
+                    const increment = Math.ceil(target / speed);
+                    
+                    if (count < target) {
+                        counter.innerText = (count + increment) + '%';
+                        setTimeout(updateCount, 10);
+                    } else {
+                        counter.innerText = target + '%';
+                    }
+                };
+                
+                // Trigger counters when in viewport
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            updateCount();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+                
+                observer.observe(counter);
+            });
+        });
+        
+        // Particle Background
+        document.addEventListener('DOMContentLoaded', function() {
+            const particlesContainer = document.querySelector('.particles');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random size
+                const size = Math.random() * 100 + 50;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                // Random position
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+                
+                // Random opacity
+                particle.style.opacity = Math.random() * 0.1 + 0.05;
+                
+                // Random animation
+                const duration = Math.random() * 20 + 10;
+                const delay = Math.random() * 5;
+                particle.style.animation = `float ${duration}s ease-in-out ${delay}s infinite`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
