@@ -33,9 +33,6 @@
     <!-- AOS (Animate On Scroll) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-    
     <!-- SweetAlert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
@@ -284,7 +281,6 @@
                     <a href="#home" class="text-gray-300 hover:text-white transition-colors font-medium">Início</a>
                     <a href="#services" class="text-gray-300 hover:text-white transition-colors font-medium">Serviços</a>
                     <a href="#results" class="text-gray-300 hover:text-white transition-colors font-medium">Resultados</a>
-                    <a href="#cases" class="text-gray-300 hover:text-white transition-colors font-medium">Cases</a>
                     <a href="#about" class="text-gray-300 hover:text-white transition-colors font-medium">Quem Somos</a>
                     <button onclick="openConsultationModal()" class="btn-glow bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold px-6 py-3 rounded-xl hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300">
                         <i class="fas fa-calendar-alt mr-2"></i>Consultoria Gratuita
@@ -303,7 +299,6 @@
                     <a href="#home" class="text-gray-300 hover:text-white transition-colors font-medium py-2">Início</a>
                     <a href="#services" class="text-gray-300 hover:text-white transition-colors font-medium py-2">Serviços</a>
                     <a href="#results" class="text-gray-300 hover:text-white transition-colors font-medium py-2">Resultados</a>
-                    <a href="#cases" class="text-gray-300 hover:text-white transition-colors font-medium py-2">Cases</a>
                     <a href="#about" class="text-gray-300 hover:text-white transition-colors font-medium py-2">Quem Somos</a>
                     <button onclick="openConsultationModal()" class="btn-glow bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold px-6 py-3 rounded-xl hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300">
                         <i class="fas fa-calendar-alt mr-2"></i>Consultoria Gratuita
@@ -425,7 +420,7 @@
                                 <span class="text-gray-300">Checklist de legalização</span>
                             </div>
                             <div class="flex items-start">
-                                <i class="fas fa-check-circle text-purptle-500 mt-1 mr-3"></i>
+                                <i class="fas fa-check-circle text-purple-500 mt-1 mr-3"></i>
                                 <span class="text-gray-300">Portfólio inicial de serviços</span>
                             </div>
                         </div>
@@ -783,148 +778,9 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Success Cases -->
-    <section id="cases" class="py-20 md:py-32 relative overflow-hidden">
-        <div class="container mx-auto px-4">
-            <!-- Section Header -->
-            <div data-aos="fade-up" class="text-center mb-16">
-                <div class="inline-flex items-center space-x-2 glass-light px-4 py-2 rounded-full mb-6">
-                    <i class="fas fa-trophy text-purple-400"></i>
-                    <span class="text-sm text-purple-300">Resultados Reais</span>
-                </div>
-                <h2 class="text-4xl md:text-6xl font-bold mb-6">
-                    <span class="gradient-text">Cases de Sucesso</span>
-                </h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                    Histórias reais de empreendedores que transformaram seus negócios com a Elevate
-                </p>
-            </div>
             
-            <!-- Cases Slider -->
-            <div class="swiper cases-swiper mb-20">
-                <div class="swiper-wrapper">
-                    <!-- Case 1 -->
-                    <div class="swiper-slide">
-                        <div class="glass rounded-3xl p-8 h-full">
-                            <div class="flex justify-between items-start mb-8">
-                                <div>
-                                    <div class="text-2xl font-bold text-white">Mell Beauty</div>
-                                    <div class="text-purple-300">+150% faturamento em 6 meses</div>
-                                </div>
-                                <div class="text-3xl">⭐</div>
-                            </div>
-                            
-                            <div class="mb-8">
-                                <div class="text-gray-400 text-sm mb-2">🎯 Destaque:</div>
-                                <div class="text-white font-medium">Como abrir com segurança e evitar dívidas iniciais</div>
-                            </div>
-                            
-                            <div class="bg-gray-800/30 rounded-2xl p-6 mb-8">
-                                <div class="text-gray-300 italic">"Com a Elevate abri meu espaço sem dívidas e com processos claros desde o primeiro dia. O 'Manual do Proprietário' foi fundamental para não cometer erros custosos."</div>
-                            </div>
-                            
-                            <div class="flex items-center mb-6">
-                                <div class="w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 flex items-center justify-center mr-4">
-                                    <i class="fas fa-user text-white"></i>
-                                </div>
-                                <div>
-                                    <div class="text-white font-medium">Empreendedora Mell Beauty</div>
-                                    <div class="text-gray-400 text-sm">Esteticista há 8 anos</div>
-                                </div>
-                            </div>
-                            
-                            <button onclick="openConsultationModal()" class="btn-glow w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 rounded-xl hover:shadow-xl transition-all duration-300">
-                                Quero resultados como estes
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <!-- Case 2 -->
-                    <div class="swiper-slide">
-                        <div class="glass rounded-3xl p-8 h-full">
-                            <div class="flex justify-between items-start mb-8">
-                                <div>
-                                    <div class="text-2xl font-bold text-white">Revigorada</div>
-                                    <div class="text-purple-300">+85% engajamento da equipe</div>
-                                </div>
-                                <div class="text-3xl">⭐</div>
-                            </div>
-                            
-                            <div class="mb-8">
-                                <div class="text-gray-400 text-sm mb-2">🎯 Destaque:</div>
-                                <div class="text-white font-medium">Como transformar a dinâmica de uma equipe</div>
-                            </div>
-                            
-                            <div class="bg-gray-800/30 rounded-2xl p-6 mb-8">
-                                <div class="text-gray-300 italic">"A Elevate transformou completamente a dinâmica da nossa equipe. Identificamos líderes naturais, criamos programas de incentivo e hoje temos uma equipe alinhada com o crescimento do negócio."</div>
-                            </div>
-                            
-                            <div class="flex items-center mb-6">
-                                <div class="w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 flex items-center justify-center mr-4">
-                                    <i class="fas fa-user text-white"></i>
-                                </div>
-                                <div>
-                                    <div class="text-white font-medium">Dona da Revigorada</div>
-                                    <div class="text-gray-400 text-sm">Clínica de estética há 3 anos</div>
-                                </div>
-                            </div>
-                            
-                            <button onclick="openConsultationModal()" class="btn-glow w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 rounded-xl hover:shadow-xl transition-all duration-300">
-                                Quero resultados como estes
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <!-- Case 3 (Placeholder for future) -->
-                    <div class="swiper-slide">
-                        <div class="glass rounded-3xl p-8 h-full">
-                            <div class="flex justify-between items-start mb-8">
-                                <div>
-                                    <div class="text-2xl font-bold text-white">Seu Negócio Aqui</div>
-                                    <div class="text-purple-300">Próximo case de sucesso</div>
-                                </div>
-                                <div class="text-3xl">🚀</div>
-                            </div>
-                            
-                            <div class="mb-8">
-                                <div class="text-gray-400 text-sm mb-2">🎯 Destaque:</div>
-                                <div class="text-white font-medium">Sua história de transformação</div>
-                            </div>
-                            
-                            <div class="bg-gray-800/30 rounded-2xl p-6 mb-8">
-                                <div class="text-gray-300 italic">"Esta poderia ser a sua história de sucesso. Com a metodologia Elevate, você pode transformar seu negócio de estética e alcançar resultados extraordinários."</div>
-                            </div>
-                            
-                            <div class="flex items-center mb-6">
-                                <div class="w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 flex items-center justify-center mr-4">
-                                    <i class="fas fa-user-plus text-white"></i>
-                                </div>
-                                <div>
-                                    <div class="text-white font-medium">Próximo empreendedor</div>
-                                    <div class="text-gray-400 text-sm">Você pode ser o próximo</div>
-                                </div>
-                            </div>
-                            
-                            <button onclick="openConsultationModal()" class="btn-glow w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold py-3 rounded-xl hover:shadow-xl transition-all duration-300">
-                                Quero ser o próximo case
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Navigation -->
-                <div class="swiper-button-next !text-purple-500"></div>
-                <div class="swiper-button-prev !text-purple-500"></div>
-                
-                <!-- Pagination -->
-                <div class="swiper-pagination !relative !mt-8"></div>
-            </div>
-            
-            <!-- Final CTA -->
-            <div data-aos="fade-up" class="relative overflow-hidden rounded-3xl">
+            <!-- Final CTA (Após o Manifesto) -->
+            <div data-aos="fade-up" class="mt-20 relative overflow-hidden rounded-3xl">
                 <div class="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-purple-600/20"></div>
                 <div class="relative glass p-8 md:p-12 rounded-3xl">
                     <div class="max-w-4xl mx-auto text-center">
@@ -1016,7 +872,6 @@
                     <ul class="space-y-3">
                         <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Início</a></li>
                         <li><a href="#results" class="text-gray-400 hover:text-white transition-colors">Resultados</a></li>
-                        <li><a href="#cases" class="text-gray-400 hover:text-white transition-colors">Cases</a></li>
                         <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">Quem Somos</a></li>
                     </ul>
                 </div>
@@ -1181,7 +1036,6 @@
 
     <!-- JavaScript Libraries -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
     <!-- Main JavaScript -->
@@ -1191,33 +1045,6 @@
             duration: 800,
             once: true,
             offset: 100
-        });
-        
-        // Initialize Swiper
-        const swiper = new Swiper('.cases-swiper', {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            loop: true,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-                768: {
-                    slidesPerView: 2,
-                },
-                1024: {
-                    slidesPerView: 3,
-                }
-            }
         });
         
         // Mobile Menu Toggle
